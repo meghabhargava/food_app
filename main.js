@@ -3,12 +3,29 @@ $('#user-email').on('input',function() {
         var message = 'Welcome Back, ' + email;
         $('.welcome-message').text(message);
     });
-	
+
 	//-------------variable for app----------
-	var foodieApp = angular.module('foodieApp',[])
-	
-	//-----------controller-------------
-	
+	var foodieApp = angular.module('foodieApp',['ngRoute']);
+  
+  //-------------------telling angular js where we want to go---------------
+  foodieApp.config(function ($routeProvider) {
+	$routeProvider
+	.when('/',{
+		templateUrl: 'pages/login.html',
+		controller: 'loginController'
+	})
+	.when('/home',{
+		templateUrl: 'pages/main.html',
+		controller: 'mainController'
+	})
+})
+
+
+//----------------------login controller------------------------
+  foodieApp.controller('loginController',function($scope) {
+})
+	//-----------maincontroller-------------
+
 	foodieApp.controller('mainController',function($scope) {
 		//	$scope.restaurants = ['Farzi Cafe','Pizza Hut','Wenger\'s Deli','Sagar Ratna'];
 
