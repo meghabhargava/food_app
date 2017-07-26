@@ -40,7 +40,7 @@ $('#user-email').on('input',function() {
 
 //-----------restaurant controller-------------------------
 foodieApp.controller('restaurantController',function($scope,$routeParams,$http) {
-
+$scope.ingredients = [];
     $scope.restaurantId = $routeParams.id; //catch the values of restaurants which is given in the url
 
   // restaurants objects--------------------
@@ -111,35 +111,38 @@ foodieApp.controller('restaurantController',function($scope,$routeParams,$http) 
 
   	$scope.restaurant = restaurants[$routeParams.id - 1];
 
+
     //------ to get best dish ingrediants----------
     $scope.getIngredients = function(url) {
-      var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'
+     var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'
 $http({
-	'method': 'POST',
-	'url': 'https://api.clarifai.com/v2/models/bd367be194cf45149e75f01d59f77ba7/outputs',
-	'headers': {
-		'Authorization': 'Key f49e748db7974ab6831f6c2b210d9cde',
-		'Content-Type': 'application/json'
-	},
-	'data': data
-}).then(function (response){
+ 	'method': 'POST',
+ 	'url': 'https://api.clarifai.com/v2/models/bd367be194cf45149e75f01d59f77ba7/outputs',
+ 	'headers': {
+ 		'Authorization': 'Key f49e748db7974ab6831f6c2b210d9cde',
+ 		'Content-Type': 'application/json'
+ 	},
+ 	'data': data,
+}).then(function (response) {
+	var ingredients = response.data.outputs[0].data.concepts;
+	for (var i =0;i < ingredients.length;i++) {
+	$scope.ingredients.push(ingredients[i].name);
+	}
+},
+
+
+  function  sucess(response){
   var ingredients = response.data.outputs[0].data.concepts;
   		var list = '';
-      for (var i =0;i<ingredients.length;i++) {="" list="" +="<div class="ingredient">" ingredients[i].name="" '<="" div="">'
-    }
-
-// 		$('.ingredients').html(list);
-console.log(list);
-      }, function (xhr) {
+       for (var i =0;i<ingredients.length;i++) {
+         list += '<div class="ingredient">' + ingredients[i].name + '</div>'
+         }
+      },
+    function error(xhr)
+    {
         console.log(xhr);
-      })
-}</ingredients.length;i++)>
-
-
-
-
-
-    }
+    });
+ }
 })
 
 

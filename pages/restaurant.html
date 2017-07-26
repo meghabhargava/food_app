@@ -41,4 +41,14 @@
         <strong>{{restaurant.vote}}</strong>
     </div>
 </div>
+<!--------error to show if restaurant name is not found-------->
 <div ng-hide="restaurant.name">error 404: not found</div>
+
+<!------list to show ingredients of bestDish---------->
+<div ng-if="ingredients">
+    <ol>
+    <li ng-repeat="ingredient in ingredients">
+    {{ingredient}}
+    </li>
+    </ol>
+</div>
