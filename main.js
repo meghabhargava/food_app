@@ -4,7 +4,7 @@ $('#user-email').on('input',function() {
         $('.welcome-message').text(message);
     });
 
-	//-------------variable for app----------
+	//-------------variable for app(angular.module syntax is used)----------
 	var foodieApp = angular.module('foodieApp',['ngRoute']);
 
   //-------------------telling angular js where we want to go---------------
@@ -21,6 +21,10 @@ $('#user-email').on('input',function() {
   .when('/restaurant/:id',{  //:id is route parameter for calling multiple parameter
 		templateUrl: 'pages/restaurant.html', // calling of url restaurant page by giving parameter
 		controller: 'restaurantController'
+	})
+  .when('/fav', {
+		templateUrl: 'pages/favourite.html',
+		controller: 'favController'
 	})
 })
 
@@ -39,7 +43,7 @@ $('#user-email').on('input',function() {
 })
 
 //-----------restaurant controller-------------------------
-foodieApp.controller('restaurantController',function($scope,$routeParams,$http) {
+foodieApp.controller('restaurantController',function($scope,$routeParams,$http,$location) {
 $scope.ingredients = [];
     $scope.restaurantId = $routeParams.id; //catch the values of restaurants which is given in the url
 
@@ -123,33 +127,30 @@ $http({
  		'Content-Type': 'application/json'
  	},
  	'data': data,
-}).then(function (response) {
+}).then(function sucess(response) {
 	var ingredients = response.data.outputs[0].data.concepts;
+  var list = '';
 	for (var i =0;i < ingredients.length;i++) {
 	$scope.ingredients.push(ingredients[i].name);
 	}
 },
-
-
-  function  sucess(response){
-  var ingredients = response.data.outputs[0].data.concepts;
-  		var list = '';
-       for (var i =0;i<ingredients.length;i++) {
-         list += '<div class="ingredient">' + ingredients[i].name + '</div>'
-         }
-      },
-    function error(xhr)
+  function error(xhr)
     {
         console.log(xhr);
     });
  }
+ $scope.goToFav = function() {
+													$location.url('fav')
+													console.log($location.url);
+												}
 })
 
 
 
-	//-----------maincontroller-------------
+	//--------------------------maincontroller-------------
 
-	foodieApp.controller('mainController',function($scope) {
+	foodieApp.controller('mainController',function($scope) //$scope use to  show list of restaurants//
+   {
 		//	$scope.restaurants = ['Farzi Cafe','Pizza Hut','Wenger\'s Deli','Sagar Ratna'];
 
 $scope.restaurants = [{
@@ -213,3 +214,5 @@ $scope.restaurants = [{
 	image: 'http://anandabhavanbaddi.com/images/client-1.jpg'
 }]
 })
+
+// favController

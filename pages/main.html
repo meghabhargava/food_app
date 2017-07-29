@@ -1,6 +1,6 @@
 
 	<!-------------------------------------main controller--------------------------------------------------------------->
-    <div class="main" ng-controller="mainController">
+    <div class="main" ng-controller="mainController"> <!--use of ng-controller to link mainController--->
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -32,12 +32,12 @@
                 <p>Find the best restaurants in town</p>
             </div>
 
-	<!-------------------------------------------------------search button------------------------------------------------------------------->
+	<!-------------------------------------------------------search bar using bootstrap--------------------------------------------------------------->
 
 	<div class="search-bar">
 		<form>
 		<div class="input-wrapper">
-		  <input type="text" class="form-control" placeholder="Search..." ng-model="query">
+		  <input type="text" class="form-control" placeholder="Search..." ng-model="query"> <!--ng model to search the query-->
 		</div>
 		<button type="submit" class="btn btn-default">Search</button>
 	  </form>
@@ -46,7 +46,7 @@
 
 	<!--------------------------------------------------------restaurant name--------------------------------------------------------->
 
-	<div ng-repeat="restaurant in restaurants | filter:query" class="restaurant">
+	<div ng-repeat="restaurant in restaurants | filter:query" class="restaurant"><!---use of ng-repeat to shoe list of restaurants-->
     <div class="rest-wrapper">
         <div class="image">
             <img ng-src="{{restaurant.image}}" height="100" width="100">
