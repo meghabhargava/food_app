@@ -1,5 +1,7 @@
+<div class="favcolor">
 <div class="list" id="list1">
-<h4>FOOD ITEMS YOU MAY LIKE:</<h4></h4>
+<center>
+<h4>ITEMS YOU LIKE:</h4></center>
 <!-- // form for elements -->
 <lable ng-repeat="list1 in lists1">
     <input type="checkbox" name="chk[]" ng-model="lst1" value="{{list1.vl}}" ng-change="change1(lst1,list1.vl)">
@@ -8,7 +10,7 @@
   </div>
 
 <div class="list" id="list2">
-    <h4>FOOD ITEMS YOU DO NOT LIKE:</h4>
+    <center><h4>ITEMS YOU DON'T LIKE:</h4></center>
     <!-- // form for elements -->
 
     <lable ng-repeat="list2 in lists2">
@@ -17,7 +19,7 @@
         </lable>
       </div>
 
-        <!--- - - -MAIN PAGE STARTS HERE --------------------------------------------------------------------------------------------------------->
+        <!------MAIN PAGE STARTS HERE --------------------------------------------------------------------->
             <div class="ui container">
                   <!-- tell them about orderBy: 'cost' and multiple filters -->
                   <div ng-repeat="restaurant in restaurants" class="restaurant" >
@@ -30,7 +32,8 @@
                  <div class="rest-extra">
                    <div class="type">
                        <div class="bestDish" ng-if="restaurant.bestDish">
-                             <span>{{restaurant.bestDish.name}} </span>
+
+                             <span>{{restaurant.bestDish.name}} </span><br>
                              <div ng-click="getFav(restaurant.bestDish.image)" class="button">See If your Fav or not</div>
                        </div>
 
@@ -43,3 +46,4 @@
 
 
             </div>
+</div>

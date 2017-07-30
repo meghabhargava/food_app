@@ -10,7 +10,7 @@ body {
 }
 
 .hero {
-    background-image: url('http://cdn-image.foodandwine.com/sites/default/files/styles/rd_home_hero_slide/public/25ways-ft-seattle-krader.jpg?itok=CEetj0-3');
+    background-image: url('https://b.zmtcdn.com/images/foodshots/cover/pizza3.jpg');
     background-size: cover;
     min-height: 300px;
     border-radius: 4px;
@@ -153,8 +153,40 @@ body {
     cursor: pointer;
 }
 
+/*----favourite file image ---*/
+.favcolor{
+  background: url("https://www.scandichotels.com/imagevault/publishedmedia/qn6infvg30381stkubky/scandic-sundsvall-city-restaurant-verket-10.jpg");
+}
+/*----------------------------Fav  page formatting of lists------*/
 .list {
-  background-color:  lightgrey;
+  background-color:lightgrey;
+  margin-top: 10px;
   width: 20%;
-  margin: 10px auto;
+
+}
+/* --- formatting of list of u may like ---*/
+
+#list1 {
+    margin-bottom: 20px;
+    margin-left: 400px;
+}
+
+/* --- formatting of list of u not like ---*/
+#list2 {
+    margin-top: -160px;
+    margin-bottom: 20px;
+    margin-left: 680px;
+}
+/*------main page image formatting----*/
+.homeimg{
+
+  background: url("http://1.bp.blogspot.com/-QMycxKuC4rs/TVfTdhs3RwI/AAAAAAAAAGs/mRaNUUe3Vwg/s1600/2+china+5+star+restaraunt.jpg");
+  background-size: cover;
+  height: 1300px;
+  width: auto;
+}
+.resimg{
+  background: url("http://www.kavach.mobi/images/Restaurants.jpg");
+  background-size: cover;
+height:660px;
 }
