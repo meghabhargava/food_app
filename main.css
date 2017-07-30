@@ -10,7 +10,7 @@ body {
 }
 
 .hero {
-    background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
+    background-image: url('http://cdn-image.foodandwine.com/sites/default/files/styles/rd_home_hero_slide/public/25ways-ft-seattle-krader.jpg?itok=CEetj0-3');
     background-size: cover;
     min-height: 300px;
     border-radius: 4px;
@@ -36,7 +36,8 @@ body {
 }
 
 #app .login {
-    background-color: #cb202d;
+    background:url("login.jpg");
+    background-size: cover;
     height: 100vh;
     min-height: 500px;
     display: flex;

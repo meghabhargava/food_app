@@ -286,7 +286,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 					{'vl' : 'pastry'},
 					{'vl' : 'egg'},
 					{'vl' : 'onion'},
-					{'vl' : 'lettuce'},
+					{'vl' : 'tomato'},
 					{'vl' : 'banana'},
 					];
 					$scope.lst2 = [];
