@@ -31,18 +31,20 @@
             <div>{{restaurant.cuisines}}</div>
             <div>₹{{restaurant.cost | number}}</div>
             <div>{{restaurant.hours}}</div>
+
+            <!-----------to get ingredient sof best dish ---->
             <div class="bestDish" ng-if="restaurant.bestDish">
              <span>{{restaurant.bestDish.name}} </span>
              <div ng-click="getIngredients(restaurant.bestDish.image)" class="button">Get Ingredients</div>
 
-            <div ng-click="goToFav" class="button">See Your fav Dishes</div>
+<!---- to go to favourite food dish----->
+            <div ng-click="goToFav()" class="button">See Your fav Dishes</div>
         </div></div>
     </div>
     <div class="rating">
         <strong>{{restaurant.vote}}</strong>
     </div>
 
-<!--------error to show if restaurant name is not found-------->
 
 
 <!------list to show ingredients of bestDish---------->
@@ -55,4 +57,6 @@
 </div>
 
 </div>
+
+<!--------error to show if restaurant name is not found-------->
 <h1 ng-hide="restaurant.name">error 404: not found</h1>
