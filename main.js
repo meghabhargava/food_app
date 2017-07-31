@@ -49,69 +49,80 @@ $scope.ingredients = [];
 
   // restaurants objects--------------------
  var restaurants= [{
-  	name: 'Laksh Restaurant',
-  	address: 'Sai Road',
-  	location: 'Baddi',
-  	category: 'Casual Dining, Bar',
-  	vote: '4.5',
-  	cuisines: 'Modern Indian',
-  	cost: '600',
-    id: 1,
-  	hours: '9 AM to 10 PM (Mon-Sun)',
-  	image: 'https://asia-public.foodpanda.com/assets/production/in/images/vendors/r2xc.jpg?v=20170610153153'
+   name: 'Hide Out Cafe',
+ 	address: 'Mall Road,Shimla',
+ 	location: 'Shimla',
+ 	meal: 'Breakfast, Lunch, Dinner,Brunch',
+ 	vote: '4.5',
+ 	cuisines: 'Italian,Chinese,American,Indian,Cafe,Fast Food',
+ good: 'Kids,Child-friendly',
+  cost: '1200',
+   id: 1,
+ 	hours: '9 AM to 10 PM (Mon-Sun)',
+  details:'Address: Mall Road, Shimla 171001,(H.P.) India  Location: Asia  >  India  >  Himachal Pradesh  >  Shimla District  >  Shimla-171001 (H.P), India   Phone Number: +91 89882 68674',
+ 	image: 'https://media-cdn.tripadvisor.com/media/photo-s/09/2a/b3/a4/refresh-yourself-with.jpg'
   },
   {
-  	name: 'A1 dhaba',
-  	address: 'bhud',
-  	location: 'baddi',
-  	category: 'Casual Dining, Bar',
-  	vote: '4.8',
-  	cuisines: 'Modern Indian & chinease',
-  	cost: '1200',
+    name: 'City Point Bakery',
+    address: 'The Mall Road, Shimla',
+    location: 'Shimla',
+    meal:'Breakfast',
+    vote: '4.5',
+    cuisines: 'Fast food',
+    good:'Child-friendly',
+    cost: '250',
     id: 2,
-  	hours: '9 AM to 10 PM (Mon-Sun)',
-  	image: 'https://www.topranker4u.com/wp-content/uploads/2017/04/top-dhaba-restaurants-300-200-300x200.jpg'
-  },
-  {
-  	name: 'Dawat Restaurant',
-  	address: 'Near Canara Bank,Rotary Chowk,Sai road',
-  	location: 'Baddi',
-  	category: 'Casual Dining, Bar',
-  	vote: '4',
-  	cuisines: 'Modern Indian & chinease',
-  	cost: '1500',
-    id: 3,
-  	hours: '9:30AM to 10:30PM (Mon-Sun)',
-  	image: 'http://images.mydala.com/uploads/event/2015-06-02/217112/217112_1.jpg'
-  },
-  {
-  	name: 'Saffron Restaurant',
-  	address: 'MDR7',
-  	location: 'baddi',
-  	category: 'Casual Dining,Sweets & Bakers',
-  	vote: '3.9',
-  	cuisines: 'Modern Indian',
-  	cost: '500',
-    id: 4,
-  	hours: '7:30AM to 10 PM (Mon-Sun)',
+    hours: '7:30AM to 10:30 PM (Mon-Sun)',
+    details:'Address: The Mall Road, Shimla-171001, H.P   Location: Asia  >  India  >  Himachal Pradesh  Phone Number: +91 177 281 1856',
+    image: 'https://media-cdn.tripadvisor.com/media/photo-s/07/ec/a0/db/city-point-bakery.jpg',
     bestDish: {
-        	name: 'Black Froest Cake',
-        	image: 'https://d2z4fd79oscvvx.cloudfront.net/0023640_black_forest_cake.jpeg'
+          name: 'Black Forest Cake',
+          image: 'https://d2z4fd79oscvvx.cloudfront.net/0023640_black_forest_cake.jpeg'
           },
-  	image: 'https://qph.ec.quoracdn.net/main-qimg-c50293086be900edec89867b17958da8-c'
   },
   {
-  	name: 'Ananda Bhawan',
-  	address: 'SCF 4,Phase 1,Housing Board,Sai Road,Near Old Malhorta Hospital',
-  	location: 'baddi',
-  	category: 'Casual Dining, Bar',
-  	vote: '4.1',
-  	cuisines: 'Modern Indian & south indian',
-  	cost: '2000',
-    id: 5,
-  	hours: '7:30AM to 10:30 PM (Mon-Sun)',
-  	image: 'http://anandabhavanbaddi.com/images/client-1.jpg'
-  }]
+  	name: 'Ashiana & Goofa',
+  	address: 'The Ridge, Lower Bazaar, Shimla 171001, India',
+  	location: 'Shimla',
+    meal:'Lunch, Dinner, Breakfast, Brunch, After-hours',
+    vote: '3.5',
+    cuisines: 'Chinese, Indian, Asian, Vegetarian Friendly',
+    good:'Kids, Child-friendly, View, Groups, Romantic',
+    cost: '500',
+  	id: 3,
+  	hours: '9:30AM to 10:30PM (Mon-Sun)',
+    details:'Address: The Ridge, Lower Bazaar, Shimla Location: Asia  >  India  >  Himachal Pradesh  >  Shimla District  >  Shimla-171001 (H.P), India Phone Number: 0177-265-8464',
+    image: 'https://c2.staticflickr.com/4/3588/3498062384_3da6d0a96b_z.jpg?zz=1'
+  },
+  {
+  	name: 'Baljees',
+  	address: 'Baljees The Mall Road, Shimla',
+  	location: 'Shimla',
+    meal:'Breakfast, Lunch, Dinner, After-hours',
+  	vote: '3.5',
+    cuisines: 'Indian',
+    good:' Groups, Kids, Child-friendly',
+    cost: '1000',
+  	id: 4,
+  	hours: '7:30AM to 10 PM (Mon-Sun)',
+    details: 'Address: Baljees The Mall Road, Shimla Location: Asia  >  India  >  Himachal Pradesh Phone Number: +91 177 265 2313',
+  	image: 'https://media-cdn.tripadvisor.com/media/photo-s/0a/49/57/85/photo0jpg.jpg'
+  },
+  {
+    	name: 'Indian Coffee House',
+    	address: 'The Mall Road,Shimla',
+    	location: 'Shimla',
+    	meal: 'Breakfast, Lunch, Dinner,Brunch',
+    	vote: '4',
+    	cuisines: 'Indian, Cafe, Vegetarian Friendly',
+      good:'Groups, Child-friendly, Kids',
+      cost: '1200',
+      id: 5,
+    	hours: '9 AM to 10 PM (Mon-Sun)',
+      details :'Address: The Mall Road, Shimla 171012, India Location: Asia  >  India  >  Himachal Pradesh  >  Shimla- District  >  Shimla-171001 (H.P), India Phone Number: +91 177 265 2982',
+    	image: 'http://snnehh.com/wp-content/uploads/2012/05/Indian-Coffee-House-Shimla.jpg',
+
+    }]
 
   	$scope.restaurant = restaurants[$routeParams.id - 1];
 
@@ -156,64 +167,59 @@ $http({
 		//	$scope.restaurants = ['Farzi Cafe','Pizza Hut','Wenger\'s Deli','Sagar Ratna'];
 
 $scope.restaurants = [{
-	name: 'Laksh Restaurant',
-	address: 'Sai Road',
-	location: 'Baddi',
-	category: 'Casual Dining, Bar',
+	name: 'Hide Out Cafe',
+	address: 'Mall Road,Shimla',
+	location: 'Shimla',
 	vote: '4.5',
-	cuisines: 'Modern Indian',
-	cost: '600',
+	cuisines: 'Italian,Chinese,American,Indian,Cafe,Fast Food',
+  cost: '2500',
   id: 1,
 	hours: '9 AM to 10 PM (Mon-Sun)',
-	image: 'https://asia-public.foodpanda.com/assets/production/in/images/vendors/r2xc.jpg?v=20170610153153'
+	image: 'https://media-cdn.tripadvisor.com/media/photo-s/09/2a/b3/a4/refresh-yourself-with.jpg'
 },
 {
-	name: 'A1 dhaba',
-	address: 'bhud',
-	location: 'baddi',
-	category: 'Casual Dining, Bar',
-	vote: '4.8',
-	cuisines: 'Modern Indian & chinease',
-	cost: '1200',
-  id: 2,
-	hours: '9 AM to 10 PM (Mon-Sun)',
-	image: 'https://www.topranker4u.com/wp-content/uploads/2017/04/top-dhaba-restaurants-300-200-300x200.jpg'
+  	name: 'City Point Bakery',
+  	address: 'The Mall Road, Shimla',
+  	location: 'Shimla',
+  	vote: '4.5',
+  	cuisines: 'Fast food',
+  	cost: '250',
+    id: 2,
+  	hours: '7:30AM to 10:30 PM (Mon-Sun)',
+  	image: 'https://media-cdn.tripadvisor.com/media/photo-s/07/ec/a0/db/city-point-bakery.jpg'
 },
 {
-	name: 'Dawat Restaurant',
-	address: 'Near Canara Bank,Rotary Chowk,Sai road',
-	location: 'Baddi',
-	category: 'Casual Dining, Bar',
-	vote: '4',
-	cuisines: 'Modern Indian & chinease',
-	cost: '1500',
-  id: 3,
-	hours: '9:30AM to 10:30PM (Mon-Sun)',
-	image: 'http://images.mydala.com/uploads/event/2015-06-02/217112/217112_1.jpg'
-},
+  	name: 'Ashiana & Goofa',
+  	address: 'The Ridge, Lower Bazaar, Shimla 171001, India',
+  	location: 'Shimla',
+    vote: '3.5',
+  	cuisines: 'Chinese, Indian, Asian, Vegetarian Friendly',
+    cost: '500',
+  	id: 3,
+  	hours: '9:30AM to 10:30PM (Mon-Sun)',
+    image: 'https://c2.staticflickr.com/4/3588/3498062384_3da6d0a96b_z.jpg?zz=1'
+	},
 {
-	name: 'Saffron Restaurant',
-	address: 'MDR7',
-	location: 'baddi',
-	category: 'Casual Dining,Sweets & Bakers',
-	vote: '3.9',
-	cuisines: 'Modern Indian',
-	cost: '500',
+  name: 'Baljees',
+  address: 'Baljees The Mall Road, Shimla',
+  location: 'Shimla',
+  vote: '3.5',
+  cuisines: 'Indian',
+  cost: '1000',
   id: 4,
-	hours: '7:30AM to 10 PM (Mon-Sun)',
-  image: 'https://qph.ec.quoracdn.net/main-qimg-c50293086be900edec89867b17958da8-c'
+  hours: '7:30AM to 10 PM (Mon-Sun)',
+  image: 'https://media-cdn.tripadvisor.com/media/photo-s/0a/49/57/85/photo0jpg.jpg'
 },
 {
-	name: 'Ananda Bhawan',
-	address: 'SCF 4,Phase 1,Housing Board,Sai Road,Near Old Malhorta Hospital',
-	location: 'baddi',
-	category: 'Casual Dining, Bar',
-	vote: '4.1',
-	cuisines: 'Modern Indian & south indian',
-	cost: '2000',
-  id: 5,
-	hours: '7:30AM to 10:30 PM (Mon-Sun)',
-	image: 'http://anandabhavanbaddi.com/images/client-1.jpg'
+name: 'Indian Coffee House',
+address: 'The Mall Road,Shimla',
+location: 'Shimla',
+vote: '4',
+cuisines: 'Indian, Cafe, Vegetarian Friendly',
+cost: '1200',
+id: 5,
+hours: '9 AM to 10 PM (Mon-Sun)',
+image: 'http://snnehh.com/wp-content/uploads/2012/05/Indian-Coffee-House-Shimla.jpg'
 }]
 })
 

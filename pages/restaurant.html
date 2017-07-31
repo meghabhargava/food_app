@@ -6,9 +6,6 @@
             <img ng-src="{{restaurant.image}}" height="100" width="100">
         </div>
         <div class="rest-info">
-            <div class="rest-category">
-               <small>{{restaurant.category}} </small>
-            </div>
             <div class="rest-name"><strong>{{restaurant.name}}</strong>
             </div>
             <div>
@@ -24,18 +21,29 @@
     <div class="rest-extra">
         <div class="type">
             <div><small>Cuisines:</small></div>
-            <div><small>Cost for Two: </small></div>
+
+                <div><small>Meal:</small></div>
+                    <div><small>Cost for Two: </small></div>
+
+
             <div><small>Hours:</small></div>
+
+        <div><small>Good For:</small></div>
+
+    <div><small>Location & Contact Information:</small></div><br><br>
         <div ng-if="restaurant.bestDish"><small>Recommended: </small></div>
         </div>
         <div class="value">
             <div>{{restaurant.cuisines}}</div>
+            <div>{{restaurant.meal}}</div>
             <div>₹{{restaurant.cost | number}}</div>
             <div>{{restaurant.hours}}</div>
+            <div>{{restaurant.good}}</div>
+            <div>{{restaurant.details}}</div>
 
             <!-----------to get ingredient sof best dish ---->
             <div class="bestDish" ng-if="restaurant.bestDish">
-             <span>{{restaurant.bestDish.name}} </span>
+             <span>{{restaurant.bestDish.name}} </span><br>
              <div ng-click="getIngredients(restaurant.bestDish.image)" class="button">Get Ingredients</div>
 
 <!---- to go to favourite food dish----->

@@ -90,11 +90,6 @@ body {
     color: #cb202d;
 }
 
-.rest-wrapper .rest-category {
-    color: #89959B;
-    text-transform: uppercase;
-}
-
 .rest-wrapper .rest-address {
     color: #89959B;
 }
@@ -125,7 +120,7 @@ body {
     letter-spacing: 2px;
 }
 
-
+/*-------------search bar--------*/
 .search-bar {
     width: 600px;
     margin-left: auto;
