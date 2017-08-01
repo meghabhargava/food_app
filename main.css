@@ -154,7 +154,7 @@ body {
 }
 /*----------------------------Fav  page formatting of lists------*/
 .list {
-  background-color:lightgrey;
+  background-color:rgba(246, 221, 204,0.5);
   margin-top: 10px;
   width: 20%;
 
