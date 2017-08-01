@@ -4,7 +4,7 @@
       <div class="login-form">
 
 <center><b>
-          <h1> LOGIN </h1></b></center>
+          <h2> LOGIN </h2></b></center>
 
        <form name="loginForm">
  <!-------------------------------------------------name------------------------------------------------------>
@@ -16,28 +16,28 @@
 <div class="form-group">
   <label for="Name"> Contact no.</label>
   <input type="number" class="form-control" id="user-number" placeholder="number" name="mobile_number" ng-model="mobile_number" required=""  ng-pattern="/^[7-9][0-9]{9}$/">
-<div ng-show="loginForm.mobile_number.$error.pattern">not valid number!Please start number from 7-9</div> <!---use only number not character---->
+<div ng-show="loginForm.mobile_number.$error.pattern"><b>not valid number!Please start number from 7-9</b></div> <!---use only number not character---->
 </div>
-<!-----------------------------------------------------------email address----------------------------------------------------------------->
+<!-----------------------------------------------------------email address---------------------------------------------->
   <div class="form-group">
     <label for="user-email">Email address</label>
     <input type="email" class="form-control" id="user-email" placeholder="Email" name="email" required="" ng-model="user.email"> <!--use of ng-model attribute-->
-    <div ng-show="loginForm.email.$error.required">Required!</div>
-    <div ng-show="loginForm.email.$error.email">This doesn't look like a valid email</div>
+    <div ng-show="loginForm.email.$error.required"><b>Required!</b></div>
+    <div ng-show="loginForm.email.$error.email"><b>This doesn't look like a valid email</b></div>
   </div>
 
-<!------------------------------------------------------------password--------------------------------------------------------------------->
+<!------------------------------------------------------------password-------------------------------------------------------->
   <div class="form-group">
       <label for="user-password">Password</label>
       <input type="password" class="form-control" id="user-password" placeholder="Password" name="password" required="" ng-model="user.password" ng-minlength="6" ng-maxlength="15"> <!--use of ng-model attribute-->
-  <div ng-show="loginForm.password.$error.minlength">
-  Password must be at least 6 characters long
+  <div ng-show="loginForm.password.$error.minlength"><b>
+  Password must be at least 6 characters long</b>
   </div>
-  <div ng-show="loginForm.password.$error.maxlength">
-  Password must be at most 15 characters long
+  <div ng-show="loginForm.password.$error.maxlength"><b>
+  Password must be at most 15 characters long</b>
   </div>
-  <div ng-show="loginForm.password.$error.required">
-  Please enter your password
+  <div ng-show="loginForm.password.$error.required"><b>
+  Please enter your password</b>
   </div>
   </div>
   <!---------- use ng-click in button-----------------------------------><center>

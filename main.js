@@ -262,11 +262,11 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 
 										id: 4,
 										bestDish: {
-													name: 'Grilled fish',
-													image: 'https://thumbs.dreamstime.com/z/grilled-fish-served-potatoes-sauce-lemon-close-up-29801081.jpg'
+													name: 'Burger',
+													image: 'http://www.tellusaboutus.com/comments/images/BK-WebComment/BB_WHOPPER-v1.png'
 												},
 
-                    image: 'https://thumbs.dreamstime.com/z/grilled-fish-served-potatoes-sauce-lemon-close-up-29801081.jpg'
+                    image: 'http://www.tellusaboutus.com/comments/images/BK-WebComment/BB_WHOPPER-v1.png'
             }]
 
 
@@ -277,7 +277,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 						{'vl' : 'cheese'},
 						{'vl' : 'sandwich'},
 						{'vl' : 'strawberry'},
-						{'vl' : 'vegetables'},
+						{'vl' : 'vegetable'},
 					];
 					$scope.lst1 = [];
 					$scope.change1 = function(check,value){
@@ -293,8 +293,8 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 					{'vl' : 'cream'},
 					{'vl' : 'onion'},
 					{'vl' : 'tomato'},
-					{'vl' : ''},
-					{'vl' : ''},
+					{'vl' : 'mustard'},
+					{'vl' : 'french fries'},
 					];
 					$scope.lst2 = [];
 					$scope.change2 = function(check,value){
