@@ -2,11 +2,22 @@
   <div class="login" ng-controller="loginController">
 
       <div class="login-form">
-        
 
-          <h3> LOGIN </h3>
+<center><b>
+          <h1> LOGIN </h1></b></center>
 
        <form name="loginForm">
+ <!-------------------------------------------------name------------------------------------------------------>
+         <div class="form-group">
+      <label for="Name"> Name</label>
+      <input type="name" class="form-control" id="user-name" placeholder="name" name="name" ng-model="user.name" required="">
+</div>
+<!--------------------------------------------------------phone number------------------------------------------>
+<div class="form-group">
+  <label for="Name"> Contact no.</label>
+  <input type="number" class="form-control" id="user-number" placeholder="number" name="mobile_number" ng-model="mobile_number" required=""  ng-pattern="/^[7-9][0-9]{9}$/">
+<div ng-show="loginForm.mobile_number.$error.pattern">not valid number!Please start number from 7-9</div> <!---use only number not character---->
+</div>
 <!-----------------------------------------------------------email address----------------------------------------------------------------->
   <div class="form-group">
     <label for="user-email">Email address</label>
@@ -29,8 +40,9 @@
   Please enter your password
   </div>
   </div>
-  <!---------- use ng-click in button----------------------------------->
+  <!---------- use ng-click in button-----------------------------------><center>
   <button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid" ng-click="goToHome()">Login</button> <!--use of ng-disabled to highlight if email and password condition is true---->
+</center>
   </form>
      </div>
   </div>

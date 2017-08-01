@@ -95,7 +95,7 @@ $scope.ingredients = [];
     image: 'https://c2.staticflickr.com/4/3588/3498062384_3da6d0a96b_z.jpg?zz=1'
   },
   {
-  	name: 'Baljees',
+  	name: 'Baljee\'s',
   	address: 'Baljees The Mall Road, Shimla',
   	location: 'Shimla',
     meal:'Breakfast, Lunch, Dinner, After-hours',
@@ -200,7 +200,7 @@ $scope.restaurants = [{
     image: 'https://c2.staticflickr.com/4/3588/3498062384_3da6d0a96b_z.jpg?zz=1'
 	},
 {
-  name: 'Baljees',
+  name: 'Baljee\'s',
   address: 'Baljees The Mall Road, Shimla',
   location: 'Shimla',
   vote: '3.5',

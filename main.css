@@ -8,7 +8,7 @@ body {
     background-color: #F3F3E8;
     font-family: Helvetica, Arial, sans-serif;
 }
-
+/*---------main file formatting------------*/
 .hero {
     background-image: url('https://b.zmtcdn.com/images/foodshots/cover/pizza3.jpg');
     background-size: cover;
@@ -34,7 +34,7 @@ body {
 .hidden {
     display: none;
 }
-
+/* login page formatting-----*/
 #app .login {
     background:url("login.jpg");
     background-size: cover;
